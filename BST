@@ -1,0 +1,26 @@
+class Node:
+    def __init__(self, key):
+        key.value = value
+        self.left = None
+        self.right = None
+
+class BST:
+    def __init__(self):
+        self.root = None
+
+    def add(self, current, value):
+        if self.root is None:
+            self.root = Node(value)
+        else:
+            if value < current.value:
+                if current.left is None:
+                    current.left = Node(value)
+                else:
+                    self.add(current.left, value)
+            else:
+                if current.right is None:
+                    current.right = Node(value)
+                else:
+                    self.add(current.left, value)
+
+# runnng time complexity is O (log2 (n))
